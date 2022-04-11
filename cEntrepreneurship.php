@@ -17,7 +17,7 @@ header("location: postDetails");
         <div class="row">
             <div class="col-12">
                 <div class="section-tittle mb-35">
-                    <h2>Entrepreneurship</h2>
+                    <h2>Entrepreneur...</h2>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ header("location: postDetails");
                 <?php
                 if (isset($_POST['searchmaster'])) {
                 $text = $_POST['searchmaster'];
-                $query = "SELECT * FROM uploads where HEADING LIKE '%$text%' AND CATEGORIES = 'entrepreneurship' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
+                $query = "SELECT * FROM uploads where HEADING LIKE '%$text%' AND CATEGORIES = 'Entrepreneurship' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
                 $result = mysqli_query($con, $query)  or die(mysqli_error($con));
                 while($row = mysqli_fetch_array( $result))
                 {
@@ -39,7 +39,6 @@ header("location: postDetails");
                         </div>
                         <div class="col-lg-8">
                             <div class="job-tittle">
-                                <span>Trending</span>
                                 <a href="cEntrepreneurship?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
                                 <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
                             </div>
@@ -48,10 +47,10 @@ header("location: postDetails");
                 </div>';
                 }
                 }else{
-                $query = "SELECT * FROM uploads where CATEGORIES = 'entrepreneurship' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
+                $query = "SELECT * FROM uploads where CATEGORIES = 'Entrepreneurship' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
                 $result = mysqli_query($con, $query)  or die(mysqli_error($con));
                 $num = mysqli_num_rows($result);
-                if ($num > 1) {
+                if ($num > 0) {
                 while($row = mysqli_fetch_array( $result))
                 {
                 echo '
@@ -62,7 +61,6 @@ header("location: postDetails");
                         </div>
                         <div class="col-lg-8">
                             <div class="job-tittle">
-                                <span>Trending</span>
                                 <a href="cEntrepreneurship?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
                                 <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
                             </div>

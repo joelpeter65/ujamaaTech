@@ -81,31 +81,15 @@ echo "<script> location.href='index'; </script>";
                         </div>
                         <form id="contact-form" action="#" method="POST">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-box user-icon mb-15">
-                                        <input type="text" name="name" placeholder="Enter your name">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-box email-icon mb-15">
-                                        <input type="text" name="email" placeholder="Enter your email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-box email-icon mb-15">
-                                        <input type="text" name="email" placeholder="Website">
-                                    </div>
-                                </div>
-                                <!-- <div class="col-lg-12 col-md-6 mb-15">
-                                    <div class="select-itms">
-                                        <select name="select" id="select2">
-                                            <option value="">Topic</option>
-                                            <option value="">Topic one</option>
-                                            <option value="">Topic Two</option>
-                                            <option value="">Topic Three</option>
-                                        </select>
-                                    </div>
-                                </div> -->
+                                <?php
+                                if (!empty($_SESSION['vistors'])) {
+                                
+                                }else{
+                                echo '<span class="text-center">
+                                New on our platform? <a href="sinUp" style="color: #4150E5; font-style: italic;">Create an account to comment</a> or <a href="login" style="color: #4150E5; font-style: italic;"> login to comment on our platform</a>
+                                </span>';
+                                }
+                                ?>
                                 <div class="col-lg-12">
                                     <div class="form-box message-icon mb-15">
                                         <textarea name="message" id="message" placeholder="Comment"></textarea>

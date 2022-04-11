@@ -39,7 +39,6 @@ header("location: postDetails");
                         </div>
                         <div class="col-lg-8">
                             <div class="job-tittle">
-                                <span>Trending</span>
                                 <a href="cSports?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
                                 <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
                             </div>
@@ -51,7 +50,7 @@ header("location: postDetails");
                 $query = "SELECT * FROM uploads where CATEGORIES = 'sports' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
                 $result = mysqli_query($con, $query)  or die(mysqli_error($con));
                 $num = mysqli_num_rows($result);
-                if ($num > 1) {
+                if ($num > 0) {
                 while($row = mysqli_fetch_array( $result))
                 {
                 echo '
@@ -62,7 +61,6 @@ header("location: postDetails");
                         </div>
                         <div class="col-lg-8">
                             <div class="job-tittle">
-                                <span>Trending</span>
                                 <a href="cSports?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
                                 <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
                             </div>

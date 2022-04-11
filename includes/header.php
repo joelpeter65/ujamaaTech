@@ -17,7 +17,7 @@ header("location: postDetails");
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/.favicon.ico">
         <!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -33,6 +33,8 @@ header("location: postDetails");
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <!-- helvetica font -->
+        <link href="//db.onlinewebfonts.com/c/63137a821976b7fdfcf941ab1528cb19?family=AG_Helvetica" rel="stylesheet" type="text/css"/>
         <body>
             <!-- ? Preloader Start -->
             <div id="preloader-active">
@@ -76,7 +78,7 @@ header("location: postDetails");
                                             <ul>
                                                 <li><a href="about">About</a></li>
                                                 <li><a href="contact">Contact</a></li>
-                                                <li><a href="login">Log In  or  Sign Up</a></li>
+                                                <li><a href="auth/login">Log In  or  Sign Up</a></li>
                                             </ul>
                                             <!-- Social -->
                                             <div class="header-social">
