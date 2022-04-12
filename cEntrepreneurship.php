@@ -53,6 +53,11 @@ header("location: postDetails");
                 if ($num > 0) {
                 while($row = mysqli_fetch_array( $result))
                 {
+                if (strlen($row['STORY']) <=130) {
+                $out = $row['STORY'];
+                } else {
+                $out = substr($row['STORY'], 0, 130) . '...';
+                }
                 echo '
                 <div class="single-job-items mb-30">
                     <div class="row">
@@ -62,7 +67,8 @@ header("location: postDetails");
                         <div class="col-lg-8">
                             <div class="job-tittle">
                                 <a href="cEntrepreneurship?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
-                                <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
+                                <p>'.$out.
+                                '</p>
                             </div>
                         </div>
                     </div>
@@ -76,7 +82,7 @@ header("location: postDetails");
             </div>
             <div class="col-lg-3 col-md-3">
                 <div class="google-add mb-40">
-                    <img src="assets/img/gallery/Ad.png" alt="">
+                    <img src="assets/img/gallery/images.jpg" alt="">
                 </div>
             </div>
         </div>

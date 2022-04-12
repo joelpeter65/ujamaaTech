@@ -3,8 +3,10 @@
 include("includes/header.php");
 ?>
 <?php
-error_reporting(0);
+//error_reporting(0);
 if (isset($_POST['upload'])) {
+$breaking = 0;
+$tops = 0;
 $file = $_FILES['file']['name'];
 $heading = $_POST['headings'];
 $cartegory = $_POST['cartegory'];

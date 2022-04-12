@@ -27,7 +27,7 @@
 */
 /*--------------- ---- Responsive --------------------------*/
 /*-------------   Color Variable  --------------*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap");*/
 /* line 33, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_color.scss */
 .white-bg {
   background: #ffffff;
@@ -83,7 +83,7 @@
 
 /* line 87, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_color.scss */
 .theme-color {
-  color: #140C40;
+  color: #0504aa;
 }
 
 /* line 50, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_variables.scss */
@@ -768,7 +768,7 @@ hr {
 /* scrollUp */
 /* line 478, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_common.scss */
 #scrollUp, #back-top {
-  background: #140C40;
+  background: #0504aa;
   height: 50px;
   width: 50px;
   right: 31px;
@@ -3372,27 +3372,27 @@ hr {
 
 /* line 3, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-area .header-top {
-  padding: 29px 170px;
+  padding: 0px 170px;
 }
 
 @media only screen and (min-width: 1601px) and (max-width: 1800px) {
   /* line 3, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
   .header-area .header-top {
-    padding: 29px 120px;
+    padding: 0px 120px;
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 3, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
   .header-area .header-top {
-    padding: 29px 10px;
+    padding: 0px 10px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /* line 3, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
   .header-area .header-top {
-    padding: 29px 10px;
+    padding: 0px 10px;
   }
 }
 
@@ -3468,7 +3468,7 @@ hr {
   border-radius: 0px;
   padding: 10px 20px;
   width: 450px;
-  color: #000000;
+  color: #3bb54a;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3575,7 +3575,7 @@ hr {
   padding-right: 36px;
   font-size: 14px;
   text-transform: capitalize;
-  color: #140C40;
+  color: #3bb54a;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -3621,7 +3621,7 @@ hr {
 /* line 150, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-bottom .main-menu ul li a {
   font-size: 16px;
-  color: #000000;
+  color: #0504aa;
   display: inline-block;
   text-transform: uppercase;
   padding: 20px 22px;
@@ -7443,7 +7443,7 @@ input:focus::-webkit-input-placeholder {
 .single-post-area .navigation-top .social-icons li i,
 .single-post-area .navigation-top .social-icons li span {
   font-size: 14px;
-  color: #999999;
+  color: #0504aa;
 }
 
 /* line 1274, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_blog_page.scss */

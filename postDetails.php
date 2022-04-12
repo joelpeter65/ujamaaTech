@@ -27,85 +27,26 @@ echo "<script> location.href='index'; </script>";
         </div>
     </div>
     <!-- Post Details End -->
-    <!--comments Area -->
-    <div class="coments-area pb-80">
-        <div class="container">
-            <div class="row ">
-                <div class="col-xl-12">
-                    <div class="small-tittle mb-30">
-                        <h2>Drop your message</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-11">
-                    <div class="single-comments mb-40">
-                        <div class="comments-items">
-                            <div class="comments-img">
-                                <a href="#"><img src="assets/img/gallery/comment-img1.png" alt=""></a>
-                            </div>
-                            <div class="comments-tittle">
-                                <a href="#"><h4>Kristiana</h4></a>
-                                <span>2 days ago</span>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- contact-form -->
+            <div class="form-wrapper pt-80">
+                <div class="row ">
+                    <div class="col-xl-12">
+                        <div class="small-tittle mb-30">
+                            <h2>Drop your message</h2>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-11">
-                    <div class="single-comments mb-30 ml-80">
-                        <div class="comments-items">
-                            <div class="comments-img">
-                                <a href="#"><img src="assets/img/gallery/comment-img2.png" alt=""></a>
-                            </div>
-                            <div class="comments-tittle">
-                                <a href="#"><h4>Jonson Alex</h4> <span class="author">Author</span></a>
-                                <span>2 days ago</span>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Form -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- contact-form -->
-                    <div class="form-wrapper pt-80">
-                        <div class="row ">
-                            <div class="col-xl-12">
-                                <div class="small-tittle mb-30">
-                                    <h2>Drop your message</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <form id="contact-form" action="#" method="POST">
-                            <div class="row">
-                                <?php
-                                if (!empty($_SESSION['vistors'])) {
-                                
-                                }else{
-                                echo '<span class="text-center">
-                                New on our platform? <a href="sinUp" style="color: #4150E5; font-style: italic;">Create an account to comment</a> or <a href="login" style="color: #4150E5; font-style: italic;"> login to comment on our platform</a>
-                                </span>';
-                                }
-                                ?>
-                                <div class="col-lg-12">
-                                    <div class="form-box message-icon mb-15">
-                                        <textarea name="message" id="message" placeholder="Comment"></textarea>
-                                    </div>
-                                    <div class="submit-info">
-                                        <button class="submit-btn2" type="submit">Leave Comment</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="u6YxwEke"></script>
+                <?PHP
+                $url = $_SERVER['SERVER_NAME'] . $_SESSION['ids'];
+                echo "<div class='fb-comments' data-href='$url' data-num-posts='10' data-width='300'></div>";
+                ?>
             </div>
         </div>
     </div>
-    <!--comments Area End -->
     <?php
     include('includes/footer.php')
     ?>

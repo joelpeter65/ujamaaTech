@@ -51,7 +51,7 @@ header("location: postDetails");
                 $query = "SELECT * FROM uploads where TOP = '1' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
                 $result = mysqli_query($con, $query)  or die(mysqli_error($con));
                 $num = mysqli_num_rows($result);
-                if ($num > 1) {
+                if ($num > 0) {
                 while($row = mysqli_fetch_array( $result))
                 {
                 echo '
@@ -99,7 +99,7 @@ header("location: postDetails");
             <div class="col-lg-3 col-md-3">
                 <!-- ads -->
                 <div class="google-add mb-40">
-                    <img src="assets/img/gallery/Ad.png" alt="">
+                    <img src="assets/img/gallery/images.jpg" alt="">
                 </div>
                 <!-- ads end -->
             </div>

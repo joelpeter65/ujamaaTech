@@ -17,7 +17,7 @@ header("location: postDetails");
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/.favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
         <!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -50,6 +50,20 @@ header("location: postDetails");
             <!-- Preloader Start-->
             <header>
                 <!-- Header Start -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="google-add">
+                                <img src="assets/img/gallery/index.jpg" height="80px" width="100%" alt="ads">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="google-add">
+                                <img src="assets/img/gallery/cindex.jpg" height="80px" width="100%" alt="ads">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="header-area">
                     <div class="main-header ">
                         <div class="header-top ">
@@ -76,14 +90,13 @@ header("location: postDetails");
                                         </div>
                                         <div class="header-info-right d-flex align-items-center">
                                             <ul>
-                                                <li><a href="about">About</a></li>
-                                                <li><a href="contact">Contact</a></li>
-                                                <li><a href="auth/login">Log In  or  Sign Up</a></li>
+                                                <li><a href="contact">Contact</a></li><!--
+                                                <li><a href="auth/login">Log In  or  Sign Up</a></li> -->
                                             </ul>
                                             <!-- Social -->
                                             <div class="header-social">
                                                 <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
                                                 <a href="#"><i class="fab fa-pinterest-p"></i></a>
                                             </div>
                                         </div>
