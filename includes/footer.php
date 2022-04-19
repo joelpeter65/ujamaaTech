@@ -23,9 +23,9 @@
                                 </div>
                             </div>
                             <div class="header-info-right d-flex align-items-center">
-                                <ul>
+                                <!--<ul>
                                     <li><a href="contact">Contact</a></li>
-                                </ul>
+                                </ul>-->
                             </div>
                         </div>
                     </div>
@@ -71,6 +71,16 @@
     </div>
 </div>
 <!-- Footer End-->
+<div class="container d-md-none .d-lg-block">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <img src="assets/img/gallery/index.jpg" style="display: block; margin-left: auto;  margin-right: auto; padding: 3px; width: 100%; height:80px" alt="ads">
+            <img src="assets/img/gallery/cindex.jpg" style="display: block; margin-left: auto;  margin-right: auto; padding: 3px; width: 100%; height:80px" alt="ads">
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
 </footer>
 <!-- Scroll Up -->
 <div id="back-top" >
@@ -112,5 +122,8 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>

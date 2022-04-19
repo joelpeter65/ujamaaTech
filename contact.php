@@ -4,9 +4,7 @@ include('includes/header.php');
 <!--?  Contact Area start  -->
 <section class="contact-section">
     <div class="container">
-        <div class="d-none d-sm-block mb-5 pb-4">
-                        
-        </div>
+         
         <div class="row">
             <div class="col-12">
                 <h2 class="contact-title">Get in Touch</h2>

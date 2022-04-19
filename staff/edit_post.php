@@ -21,9 +21,10 @@ if(isset($_POST['editing'])){
 $up_id = $_POST['up_id'];
 $cartegory = $_POST['cartegory'];
 $heading = $_POST['heading'];
+$video = $_POST['heading'];
 $story = $_POST['story'];
 if(!empty($up_id)){
-$sql_staff=(" UPDATE uploads SET HEADING = '$heading', CATEGORIES = '$cartegory', STORY = '$story' WHERE UP_ID = '$up_id' ");
+$sql_staff=(" UPDATE uploads SET HEADING = '$heading', VIDEO = '$video', CATEGORIES = '$cartegory', STORY = '$story' WHERE UP_ID = '$up_id' ");
 $work = mysqli_query($con, $sql_staff);
 if($work){
 echo '<script>alert("Success! Updated a posted successfully")</script>';
@@ -47,13 +48,9 @@ window.location.reload(1);
       <?php echo $alert;?>
       <form class="form-vertical" enctype="multipart/form-data" method="POST" action="">
         <div class="form-group">
-          <label>Edit Heading</label>
-          <input type="text" class="form-control" name="heading" value="<?php echo $data['HEADING'];?>" required="true"/>
-        </div>
-        <div class="form-group">
           <label>Edit News Cartegory</label>
           <select class="form-control" required="true" name="cartegory" id="exampleFormControlSelect1">
-            <option>Edit News Cartegory</option>
+            <option><?php echo $data['CATEGORIES'];?></option>
             <option value="Business">Business</option>
             <option value="Sports">Sports</option>
             <option value="Agriculture">Agriculture</option>
@@ -62,8 +59,16 @@ window.location.reload(1);
           </select>
         </div>
         <div class="form-group">
-          <label>Edit Story</label>
-          <textarea class="form-control" name="story" value="<?php echo $data['STORY'];?>" required="true"></textarea>
+          <label>Edit Heading</label>
+          <input type="text" class="form-control" name="heading" value="<?php echo $data['HEADING'];?>" required="true"/>
+        </div>
+        <div class="form-group">
+          <label>Edit Video</label>
+          <input type="text" class="form-control" name="heading" value="<?php echo $data['VIDEO'];?>" required="true"/>
+        </div>
+        <div class="form-group">
+          <label>Story</label>
+          <textarea class="form-control" name="story" value="<?php echo $data['STORY'];?>"></textarea>
         </div>
         <div class="form-group">
           <input type="hidden" class="form-control" name="up_id" value="<?php echo $data['UP_ID'];?>" readonly="true"/><br>
@@ -75,6 +80,10 @@ window.location.reload(1);
     </div>
   </div>
 </div>
+<script src="ckeditor\ckeditor.js"></script>
+<script>
+  CKEDITOR.replace('story');
+</script>
 <?php
 include ('includes/footer.php');
 ?>

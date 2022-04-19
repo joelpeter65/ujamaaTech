@@ -31,6 +31,11 @@ header("location: postDetails");
                 $result = mysqli_query($con, $query)  or die(mysqli_error($con));
                 while($row = mysqli_fetch_array( $result))
                 {
+                  if (strlen($row['STORY']) <=130) {
+                $out = $row['STORY'];
+                } else {
+                $out = substr($row['STORY'], 0, 130) . '...';
+                }
                 echo '
                 <div class="single-job-items mb-30">
                     <div class="row">
@@ -41,7 +46,7 @@ header("location: postDetails");
                             <div class="job-tittle">
                                 <span>Trending</span>
                                 <a href="cEntrepreneurship?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
-                                <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
+                                <p>'.$out.'</p>
                             </div>
                         </div>
                     </div>
@@ -54,6 +59,11 @@ header("location: postDetails");
                 if ($num > 0) {
                 while($row = mysqli_fetch_array( $result))
                 {
+                  if (strlen($row['STORY']) <=130) {
+                $out = $row['STORY'];
+                } else {
+                $out = substr($row['STORY'], 0, 130) . '...';
+                }
                 echo '
                 <div class="single-job-items mb-30">
                     <div class="row">
@@ -64,7 +74,7 @@ header("location: postDetails");
                             <div class="job-tittle">
                                 <span>Trending</span>
                                 <a href="cEntrepreneurship?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4>'.$row['HEADING'].'</h4></a>
-                                <p>We present things in a way that isn’t sensational, said Ms. Cham mavanijakul, 20, whose family has roots...</p>
+                                <p>'.$out.'</p>
                             </div>
                         </div>
                     </div>
@@ -75,30 +85,10 @@ header("location: postDetails");
                 }
                 }
                 ?>
-                <nav class="blog-pagination justify-content-center d-flex">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a href="#" class="page-link" aria-label="Previous">
-                                <i class="ti-angle-left"></i>
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#" class="page-link">1</a>
-                        </li>
-                        <li class="page-item active">
-                            <a href="#" class="page-link">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a href="#" class="page-link" aria-label="Next">
-                                <i class="ti-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
             <div class="col-lg-3 col-md-3">
                 <!-- ads -->
-                <div class="google-add mb-40">
+                <div class="google-add mb-40 d-none d-lg-block">
                     <img src="assets/img/gallery/images.jpg" alt="">
                 </div>
                 <!-- ads end -->

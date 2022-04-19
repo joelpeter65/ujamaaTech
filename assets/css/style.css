@@ -205,7 +205,7 @@ h4,
 h5,
 h6 {
   font-family: "Open Sans", sans-serif;
-  color: #072366;
+  color: #0504aa;
   margin-top: 0px;
   font-style: normal;
   font-weight: 500;
@@ -3000,7 +3000,7 @@ hr {
   position: absolute;
   content: "";
   height: 1px;
-  width: 77%;
+  width: 70%;
   background: #C7D2D8;
   right: 0;
   top: 50%;
@@ -3010,14 +3010,14 @@ hr {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* line 956, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_common.scss */
   .section-tittle::before {
-    width: 58%;
+    width: 50%;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 956, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_common.scss */
   .section-tittle::before {
-    width: 42%;
+    width: 40%;
   }
 }
 
@@ -3053,7 +3053,7 @@ hr {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 22px;
-  color: #140C40;
+  color: #0504aa;
   text-transform: capitalize;
   display: inline-block;
   color: #fff;
@@ -3464,11 +3464,11 @@ hr {
 
 /* line 51, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-area .header-top .header-info-left .form-box input {
-  border: 1px solid #eeeeee;
+  border: 1px solid #3BB54A;
   border-radius: 0px;
   padding: 10px 20px;
   width: 450px;
-  color: #3bb54a;
+  color: #3BB54A;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3704,22 +3704,22 @@ hr {
 
 /* line 225, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-social a {
-  color: #C7D2D8;
+  color: #3BB54A;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  font-size: 14px;
+  font-size: 22px;
   line-height: 40px;
   display: inline-block;
   text-align: center;
   margin-right: 8px;
-  border: 1px solid #C7D2D8;
+  border: 0px solid #C7D2D8;
 }
 
 /* line 236, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-social a:hover {
-  color: #C7D2D8;
-  border: 1px solid #C7D2D8;
+  color: #3BB54A;
+  border: 0px solid #C7D2D8;
   background: #fff;
 }
 

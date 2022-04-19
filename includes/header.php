@@ -9,7 +9,7 @@ header("location: postDetails");
 }
 ?>
 <!doctype html>
-<html class="php" lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -35,6 +35,21 @@ header("location: postDetails");
         <link rel="stylesheet" href="assets/css/style.css">
         <!-- helvetica font -->
         <link href="//db.onlinewebfonts.com/c/63137a821976b7fdfcf941ab1528cb19?family=AG_Helvetica" rel="stylesheet" type="text/css"/>
+        <style>
+        .news-scroll a {
+        text-decoration: none
+        }
+        .dot {
+        height: 6px;
+        width: 6px;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-top: 2px !important;
+        background-color: #3bb54a;
+        border-radius: 50%;
+        display: inline-block
+        }
+        </style>
         <body>
             <!-- ? Preloader Start -->
             <div id="preloader-active">
@@ -48,22 +63,18 @@ header("location: postDetails");
                 </div>
             </div>
             <!-- Preloader Start-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <img src="assets/img/gallery/index.jpg" style="display: block; margin-left: auto;  margin-right: auto; padding: 3px; width: 100%; height:80px" alt="ads">
+                        <img src="assets/img/gallery/cindex.jpg" style="display: block; margin-left: auto;  margin-right: auto; padding: 3px; width: 100%; height:80px" alt="ads">
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
             <header>
                 <!-- Header Start -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="google-add">
-                                <img src="assets/img/gallery/index.jpg" height="80px" width="100%" alt="ads">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="google-add">
-                                <img src="assets/img/gallery/cindex.jpg" height="80px" width="100%" alt="ads">
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="header-area">
                     <div class="main-header ">
                         <div class="header-top ">
@@ -72,7 +83,7 @@ header("location: postDetails");
                                     <div class="row d-flex justify-content-lg-between align-items-center">
                                         <div class="header-info-left">
                                             <li class="d-none d-lg-block">
-                                                <div class="form-box f-right ">
+                                                <div class="form-box f-right">
                                                     <form action="#" method="POST">
                                                         <input type="text" name="searchmaster" placeholder="Search your interest..." onsubmit="this.form.submit()">
                                                         <div class="search-icon">
@@ -89,10 +100,9 @@ header("location: postDetails");
                                             </div>
                                         </div>
                                         <div class="header-info-right d-flex align-items-center">
-                                            <ul>
-                                                <li><a href="contact">Contact</a></li><!--
-                                                <li><a href="auth/login">Log In  or  Sign Up</a></li> -->
-                                            </ul>
+                                            <!-- <ul>
+                                                <li><a href="contact"></a></li>
+                                            </ul> -->
                                             <!-- Social -->
                                             <div class="header-social">
                                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -142,34 +152,25 @@ header("location: postDetails");
             </header>
             <main>
                 <!-- Nwes slider Start -->
-                <div class="nes-slider-area pt-5 pb-5">
+                <div class="news-slider-area pt-5 pb-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="section-tittle mb-35">
+                                <div class="section-tittle">
                                     <h2><button class="btn btn-danger">Breaking News</button></h2>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="news-slider-active">
+                                <div class="d-flex justify-content-between align-items-center breaking-news">
+                                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
                                     <?php
                                     $query = "SELECT * FROM uploads where BREAKING = '1' AND APPROVE = 'OK' ORDER BY UP_ID DESC";
                                     $result = mysqli_query($con, $query)  or die(mysqli_error($con));
                                     $num = mysqli_num_rows($result);
-                                    if ($num > 1) {
+                                    if ($num > 0) {
                                     while($row = mysqli_fetch_array( $result))
                                     {
-                                    echo '
-                                    <div class="single-news-slider">
-                                        <a href="index?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><h4 class="container text-center">"'.$row['HEADING'].'"</h4></a>
-                                    </div>';
-                                    }
-                                    }else{
-                                    echo '<div class="text-center display-1 justify-content-center">Nothing to Report here</div>';
-                                    }
-                                    ?>
+                                    echo '<a class="item" href="index?id='.urlencode(base64_encode($row['UP_ID'])).'&action=Move"><b>"'.$row['HEADING'].'"</b></a><span class="dot"></span>';
+                                    }}?>
+                                    </marquee>
                                 </div>
                             </div>
                         </div>

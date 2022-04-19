@@ -63,7 +63,8 @@
 		echo '<div class = "alert alert-info alert-dismissable">There is no news uploaded yet.</div>';
 		}
 			}else{
-			$sql_staff=mysqli_query($con, "SELECT * FROM uploads WHERE APPROVE = 'PENDING' ORDER BY UP_ID DESC");
+              $acct = $_SESSION['Username'];
+			$sql_staff=mysqli_query($con, "SELECT * FROM uploads WHERE APPROVE = 'PENDING'AND ST_by = '$acct' ORDER BY UP_ID DESC");
 			$count=mysqli_num_rows($sql_staff);
 			if($count > 0){
 			$k=1;

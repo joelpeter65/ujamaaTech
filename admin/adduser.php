@@ -9,18 +9,17 @@ window.history.replaceState( null, null, window.location.href );
 </script>
 <?php
 if (isset($_POST['Adduser'])) {
-	$Name = $_POST['name'];
-	$email = $_POST['email'];
-	$Username = $_POST['user'];
-	$pass1 = $_POST['pass1'];
-	$pass2 = $_POST['pass2'];
-	$level = $_POST['Occupation'];
-	$Password = base64_encode(strtoupper($_POST['pass1']));
-	if ($pass1 == $pass2) {
-			if (!empty($Name) && !empty($email)  && !empty($level) && !empty($Username) && !empty($Password)) {
-		$query = "INSERT INTO users(Name, email, Username, Password, Level) VALUES('$Name', '$email', '$Username', '$Password', '$level' )";
-		$action = mysqli_query($con, $query);
-		if ($action) {
+$Name = $_POST['name'];
+$email = $_POST['email'];
+$Username = $_POST['user'];
+$pass1 = $_POST['pass1'];
+$pass2 = $_POST['pass2'];
+$level = $_POST['Occupation'];
+$Password = base64_encode(strtoupper($_POST['pass1']));
+if ($pass1 == $pass2) {
+if (!empty($Name) && !empty($email)  && !empty($level) && !empty($Username) && !empty($Password)) {
+	$action = mysqli_query($con, "INSERT INTO users(Name, email, Username, Password, Level) VALUES('$Name', '$email', '$Username', '$Password', '$level' )");
+if ($action) {
 echo '<script>alert("Success! User Added successfully")</script>';
 }else{
 echo '<script>alert("Error! Something is wrong")</script>';

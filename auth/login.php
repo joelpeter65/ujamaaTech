@@ -65,7 +65,7 @@ echo '<script>alert("Error! Wrong username or password")</script>';
     <title>Login | UjamaaTech</title>
     <meta name="description" content="" />
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon/.favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -100,7 +100,11 @@ echo '<script>alert("Error! Wrong username or password")</script>';
                 <!-- Logo -->
                 <div class="app-brand justify-content-center">
                   <a href="index" class="app-brand-link gap-2">
-                    <h2 class="demo text-body fw-bolder">UjamaaTech</h2>
+                    <div class="demo text-body fw-bolder">
+                      <div class=" demo menu-text fw-bolder ms-2">
+                        <img src="assets/img/favicon/logo.png" width="100%" alt="">
+                      </div>
+                    </div>
                   </a>
                 </div>
                 <!-- /Logo -->

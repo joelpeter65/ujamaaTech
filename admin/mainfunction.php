@@ -3,23 +3,24 @@
 include("includes/header.php");
 ?>
 <?php
-//error_reporting(0);
+error_reporting(0);
 if (isset($_POST['upload'])) {
 $breaking = 0;
 $tops = 0;
+$video = '';
 $file = $_FILES['file']['name'];
 $heading = $_POST['headings'];
+$video = $_POST['video'];
 $cartegory = $_POST['cartegory'];
 $breaking = $_POST['brak'];
 $tops = $_POST['tops'];
 $story = $_POST['story'];
-$usernamez = "Joel Peter";
-//$_SESSION['Username'];
+$usernamez = $_SESSION['Username'];
 $date = date("Y-m-d");
 $extension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
 if (!empty($usernamez)) {
 if($extension=='png' || $extension=='jpeg' || $extension=='jpg'){
-$sql = "INSERT INTO uploads (UPLOAD_DATE,IMAGES,CATEGORIES,BREAKING,TOP,HEADING, STORY, ST_by) VALUES ('$date', '$file', '$cartegory', '$breaking', '$tops', '$heading', '$story', '$usernamez')";
+$sql = "INSERT INTO uploads (UPLOAD_DATE,IMAGES,CATEGORIES,BREAKING,TOP,HEADING, STORY, VIDEO, ST_by) VALUES ('$date', '$file', '$cartegory', '$breaking', '$tops', '$heading', '$story', '$video', '$usernamez')";
 $action = mysqli_query($con, $sql);
 if ($action) {
 move_uploaded_file($_FILES['file']['tmp_name'], "../assets/img/post/$file");
@@ -42,9 +43,9 @@ echo '<script>alert("Error! Please logout and login to solve this error else you
     <div class="card-body">
       <form action="mainfunction" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-          <label for="defaultSelect" class="form-label">News Cartegory</label>
+          <label for="defaultSelect" class="form-label">Cartegory</label>
           <select id="defaultSelect" name="cartegory" class="form-select">
-            <option>Select News Cartegory</option>
+            <option>Select Upload Cartegory</option>
             <option value="Business">Business</option>
             <option value="Sports">Sports</option>
             <option value="Agriculture">Agriculture</option>
@@ -55,6 +56,10 @@ echo '<script>alert("Error! Please logout and login to solve this error else you
         <div class="mb-3">
           <label for="formFile" class="form-label">Upload Images</label>
           <input class="form-control" type="file" id="formFile" name="file" />
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Video Link</label>
+          <input class="form-control" type="text" id="formFile" name="video" placeholder="News Title" />
         </div>
         <div class="row">
           <div class="col-lg-6">
@@ -71,20 +76,22 @@ echo '<script>alert("Error! Please logout and login to solve this error else you
           </div>
         </div>
         <div class="mb-3">
-          <label for="formFile" class="form-label">News Title</label>
+          <label for="formFile" class="form-label">Title</label>
           <input class="form-control" type="text" id="formFile" name="headings" placeholder="News Title" />
         </div>
         <div class="mb-3">
-          <label for="formFile" class="form-label">News Body</label>
-          <textarea class="form-control" name="story" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="formFile" class="form-label">Body/Story</label>
+          <textarea name="story"></textarea>
         </div>
         <button type="submit" name="upload" class="btn btn-primary"><i class="bx bx-upload"></i>Upload</button>
       </form>
     </div>
   </div>
 </div>
-<div class="col-lg-3"></div>
-</div>
+<script src="ckeditor\ckeditor.js"></script>
+<script>
+  CKEDITOR.replace('story');
+</script>
 <?php
 include('includes/footer.php');
 ?>

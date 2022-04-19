@@ -43,10 +43,12 @@ echo '<script>alert("Error! Logout and login to solve this error!")</script>';
 			</div>
 			<br>
 			<?php
-			echo '<center><h4><b>'.$data['HEADING'].'</b></h4></center><br><img src="../assets/img/post/'.$data['IMAGES'].'" style="border-radius: 5px;" width="100%" class="img-thumnail"/><br><i>Story written by&nbsp;'.$data['ST_by'].'</i><p class="displaytext">'.$data['STORY'].'</p><br><i class="date">Published on&nbsp;'.$data['UPLOAD_DATE'].'</i>';
-			}?>
-		</div>
+			echo '<center><h4><b>'.$data['HEADING'].'</b></h4></center><br><img src="../assets/img/post/'.$data['IMAGES'].'" style="border-radius: 5px;" width="100%" class="img-thumnail"/><br><i>Story written by&nbsp;'.$data['ST_by'].'</i><p class="displaytext">'.$data['STORY'].'</p><div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="'.$data['VIDEO'].'" allowfullscreen></iframe>
+		</div><i class="date">Published on&nbsp;'.$data['UPLOAD_DATE'].'</i>';
+		}?>
 	</div>
+</div>
 </div>
 <?php
 include ('includes/footer.php');

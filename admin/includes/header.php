@@ -25,7 +25,7 @@ header("location: postDetails");
         <title>UjamaaTech</title>
         <meta name="description" content="" />
         <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon/.favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +54,9 @@ header("location: postDetails");
                     <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                         <div class="app-brand demo">
                             <a href="mainfunction" class="app-brand-link">
-                                <h2 class=" demo menu-text fw-bolder ms-2">UjamaaTech</h2>
+                                <div class=" demo menu-text fw-bolder ms-2">
+                                    <img src="assets/img/favicon/logo-mobile.png" alt="">
+                                </div>
                             </a>
                             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
                                 <i class="bx bx-chevron-left bx-sm align-middle"></i>
@@ -142,7 +144,7 @@ header("location: postDetails");
                                                     <i class="bx bx-user me-2"></i>
                                                     <span class="align-middle">My Profile</span>
                                                 </a>
-                                            </li> 
+                                            </li>
                                             <li>
                                                 <div class="dropdown-divider"></div>
                                             </li>-->
