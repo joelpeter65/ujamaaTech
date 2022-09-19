@@ -63,7 +63,7 @@ header("location: postDetails");
                 </div>
             </div>
             <!-- Preloader Start-->
-            <div class="container-fluid">
+            <!-- <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-8">
@@ -72,7 +72,7 @@ header("location: postDetails");
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
-            </div>
+            </div> -->
             <header>
                 <!-- Header Start -->
                 <div class="header-area">
