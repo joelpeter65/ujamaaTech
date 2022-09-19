@@ -7,7 +7,7 @@
             document.write(new Date().getFullYear());
             </script>
             ,
-            <a href="https://ujamaatech.com" target="_blank" class="footer-link fw-bolder">UjamaaTech</a>
+            <a href="https://ujamaatech.com" target="_blank" class="footer-link fw-bolder">Joel Peter Kiwalaka</a>
         </div>
     </div>
 </footer>

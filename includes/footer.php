@@ -62,7 +62,7 @@
                 <div class="col-xl-9 col-lg-8">
                     <div class="footer-copy-right text-center">
                         <p>
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="index" target="_blank">UjamaaTech</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="index" target="_blank">Joel Peter Kiwalaka</a>
                         </p>
                     </div>
                 </div>
