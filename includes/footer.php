@@ -71,7 +71,7 @@
     </div>
 </div>
 <!-- Footer End-->
-<div class="container d-md-none .d-lg-block">
+<!-- <div class="container d-md-none .d-lg-block">
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
@@ -80,7 +80,7 @@
         </div>
         <div class="col-lg-2"></div>
     </div>
-</div>
+</div> -->
 </footer>
 <!-- Scroll Up -->
 <div id="back-top" >
