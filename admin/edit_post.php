@@ -64,7 +64,7 @@ window.location.reload(1);
         </div>
         <div class="form-group">
           <label>Edit Video</label>
-          <input type="text" class="form-control" name="heading" value="<?php echo $data['VIDEO'];?>" required="true"/>
+          <input type="text" class="form-control" name="heading" value="<?php echo $data['VIDEO'];?>" />
         </div>
         <div class="form-group">
           <label>Story</label>
