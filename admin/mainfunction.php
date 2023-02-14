@@ -5,35 +5,35 @@ include("includes/header.php");
 <?php
 error_reporting(0);
 if (isset($_POST['upload'])) {
-$breaking = 0;
-$tops = 0;
-$video = '';
-$file = $_FILES['file']['name'];
-$heading = $_POST['headings'];
-$video = $_POST['video'];
-$cartegory = $_POST['cartegory'];
-$breaking = $_POST['brak'];
-$tops = $_POST['tops'];
-$story = $_POST['story'];
-$usernamez = $_SESSION['Username'];
-$date = date("Y-m-d");
-$extension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
-if (!empty($usernamez)) {
-if($extension=='png' || $extension=='jpeg' || $extension=='jpg'){
-$sql = "INSERT INTO uploads (UPLOAD_DATE,IMAGES,CATEGORIES,BREAKING,TOP,HEADING, STORY, VIDEO, ST_by) VALUES ('$date', '$file', '$cartegory', '$breaking', '$tops', '$heading', '$story', '$video', '$usernamez')";
-$action = mysqli_query($con, $sql);
-if ($action) {
-move_uploaded_file($_FILES['file']['tmp_name'], "../assets/img/post/$file");
-echo '<script>alert("Success! Posted successfully")</script>';
-}else{
-echo '<script>alert("Error! Something has gone wrong post not posted")</script>';
-}
-}else{
-echo '<script>alert("Sorry! That is not an image")</script>';
-}
-}else{
-echo '<script>alert("Error! Please logout and login to solve this error else your are not authoriezed to upload any thing here!")</script>';
-}
+  $breaking = 0;
+  $tops = 0;
+  $video = '';
+  $file = $_FILES['file']['name'];
+  $heading = $_POST['headings'];
+  $video = $_POST['video'];
+  $cartegory = $_POST['cartegory'];
+  $breaking = $_POST['brak'];
+  $tops = $_POST['tops'];
+  $story = $_POST['story'];
+  $usernamez = $_SESSION['Username'];
+  $date = date("Y-m-d");
+  $extension = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
+  if (!empty($usernamez)) {
+    if ($extension == 'png' || $extension == 'jpeg' || $extension == 'jpg') {
+      $sql = "INSERT INTO uploads (UPLOAD_DATE,IMAGES,CATEGORIES,BREAKING,TOP,HEADING, STORY, VIDEO, ST_by) VALUES ('$date', '$file', '$cartegory', '$breaking', '$tops', '$heading', '$story', '$video', '$usernamez')";
+      $action = mysqli_query($con, $sql);
+      if ($action) {
+        move_uploaded_file($_FILES['file']['tmp_name'], "../assets/img/post/$file");
+        echo '<script>alert("Success! Posted successfully")</script>';
+      } else {
+        echo '<script>alert("Error! Something has gone wrong post not posted")</script>';
+      }
+    } else {
+      echo '<script>alert("Sorry! That is not an image")</script>';
+    }
+  } else {
+    echo '<script>alert("Error! Please logout and login to solve this error else your are not authoriezed to upload any thing here!")</script>';
+  }
 }
 ?>
 <div class="container">
