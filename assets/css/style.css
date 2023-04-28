@@ -3464,11 +3464,11 @@ hr {
 
 /* line 51, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-area .header-top .header-info-left .form-box input {
-  border: 1px solid #3BB54A;
+  border: 1px solid #006353;
   border-radius: 0px;
   padding: 10px 20px;
   width: 450px;
-  color: #3BB54A;
+  color: #006353;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -3575,7 +3575,7 @@ hr {
   padding-right: 36px;
   font-size: 14px;
   text-transform: capitalize;
-  color: #3bb54a;
+  color: #006353;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -3704,7 +3704,7 @@ hr {
 
 /* line 225, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-social a {
-  color: #3BB54A;
+  color: #006353;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -3718,7 +3718,7 @@ hr {
 
 /* line 236, C:/Users/HP/Desktop/jun-2020/281.Magazine_News/assets/scss/_headerMenu.scss */
 .header-social a:hover {
-  color: #3BB54A;
+  color: #006353;
   border: 0px solid #C7D2D8;
   background: #fff;
 }
