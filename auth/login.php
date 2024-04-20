@@ -21,7 +21,7 @@ $Username=$staff_data['Username'];
 if ($extra == "Master") {
 if ($status == "Unblocked") {
 $_SESSION['Username']= $Username;
-mysqli_query($con, 'UPDATE users SET uptime = NOW() WHERE id = $ID');
+// mysqli_query($con, 'UPDATE users SET uptime = NOW() WHERE id = $ID');
 //header ('location:admin/mainfunction');
 echo "<script> location.href='../admin/mainfunction'; </script>";
 }else{
